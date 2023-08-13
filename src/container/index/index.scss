@@ -1,7 +1,77 @@
-@use '../../style' as s;
+.page {
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-main {
-	background: s.color(dark);
-	color: s.color(light);
-	padding: s.space(4);
-} 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__section {
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &--viewed {
+      border: 1px solid #e6e6e6;
+      background-color: #ffffff;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__categories {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__category {
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 12px;
+
+    &--important {
+      background-color: #f7e9e1;
+      color: #f46f17;
+    }
+
+    &--new {
+      background-color: #f6e8ef;
+      color: #ef5da8;
+    }
+  }
+
+  &__content {
+    font-size: 16px;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: #888888;
+  }
+}
