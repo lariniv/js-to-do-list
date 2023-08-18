@@ -4,8 +4,28 @@
 }}
 
 <div class="page">
-    Hello world
+    <h1 class="title">To-do list</h1>
+
+    <div class="task">
+        <input type="text" class="task__input" name="task" placeholder="Введіть задачу...">
+        <button class="task__button button">Додати</button>
+    </div>
+
+    <main class="list"></main>
 </div>
+
+<template id="task">
+    <div class="list__item ">
+        <span class="list__number">1.</span>
+
+        <span class="list__text">Some placeholder content in a paragraph below the heading and date. </span>
+
+        <button class="list__button list__button--do button">
+        </button>
+        <button class="list__button list__button--cancel button">
+        </button>
+    </div>
+</template>
 
 {{!
 Цей код містить лише те, що буде виводитись в
